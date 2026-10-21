@@ -19,6 +19,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {
+        "message": "Bienvenido a TokenLens Engine API",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 @app.get("/health")
 def health_check():
     return {"status": "ok", "service": "TokenLens Engine"}
