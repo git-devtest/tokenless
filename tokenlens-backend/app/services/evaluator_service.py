@@ -32,7 +32,7 @@ class EvaluatorService:
 
     async def evaluate_prompt(self, prompt: str) -> LLMJudgeOutput:
         response = self.client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents=f"Audita el siguiente prompt de usuario:\n\n\"\"\"\n{prompt}\n\"\"\"",
             config=types.GenerateContentConfig(
                 system_instruction=BOONSTRA_SYSTEM_INSTRUCTION,

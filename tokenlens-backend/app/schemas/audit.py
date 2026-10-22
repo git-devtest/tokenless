@@ -3,7 +3,7 @@ from typing import List, Literal
 
 class AuditRequest(BaseModel):
     prompt: str = Field(..., min_length=3, description="Texto del prompt a auditar")
-    target_model: Literal["gemini-2.0-flash", "gpt-4o", "gpt-4o-mini"] = "gemini-2.0-flash"
+    target_model: Literal["gemini-2.5-flash", "gpt-4o", "gpt-4o-mini"] = "gemini-2.5-flash"
 
 class TokenMetrics(BaseModel):
     token_count: int

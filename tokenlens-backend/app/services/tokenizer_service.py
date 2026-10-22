@@ -8,7 +8,7 @@ class TokenizerService:
         self.gemini_client = genai.Client(api_key=settings.GEMINI_API_KEY)
         self.openai_encoding = tiktoken.get_encoding("cl100k_base")
 
-    def count_and_slice(self, text: str, model: str = "gemini-2.0-flash") -> Tuple[int, List[str]]:
+    def count_and_slice(self, text: str, model: str = "gemini-2.5-flash") -> Tuple[int, List[str]]:
         if not text.strip():
             return 0, []
 
